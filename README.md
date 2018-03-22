@@ -37,6 +37,7 @@ Docker containers for testing miracl SSO services
 1. copy config file to consul key e.g. `../config/consul_add.sh config.json srv-idp`
 1. copy config pointing to consul e.g. `./cp.sh ../environment/config/srv-idp.1.3.remote.json /etc/srv-idp/config.json`
 1. setup any ldap configuration e.g. `cat ../environment/ldap/users.ldif | ../environment/ldap/add.sh` (and you can remove with `cat ../environment/ldap/users.ldif | ../environment/ldap/delete.sh`)
+1. start redis `./service.sh redis start`or simply `./redis.sh start`
 1. start the service e.g. `./service.sh srv-idp start`
 1. access srv-idp at `http://127.0.0.1:8000/services`
 1. access consul at `http://127.0.0.1:8001`
